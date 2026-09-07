@@ -1,10 +1,23 @@
 'use client';
 
 import React, { useState } from 'react';
+import { EcosystemSwitcher } from './EcosystemSwitcher';
 import Link from 'next/link';
 import { Disc, Mic2, Radio, Send, X, CheckCircle2, ShieldCheck, ArrowRight } from 'lucide-react';
 
 export default function Header() {
+  const [isEcosystemOpen, setIsEcosystemOpen] = useState(false);
+
+  React.useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        setIsEcosystemOpen((prev) => !prev);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
   const [demoSubmitted, setDemoSubmitted] = useState(false);
   const [demoData, setDemoData] = useState({
@@ -64,6 +77,20 @@ export default function Header() {
               className="px-4 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-black font-semibold text-xs tracking-wider uppercase hover:brightness-110 transition shadow-lg shadow-amber-500/20 flex items-center gap-1.5"
             >
               <Send className="w-3.5 h-3.5" /> Submit A&R Demo
+            </button>
+            <button
+              onClick={() => setIsEcosystemOpen(true)}
+              className="px-3 py-2 rounded-xl bg-zinc-900 border border-white/10 hover:border-amber-400/40 text-xs font-mono text-zinc-300 hover:text-white transition flex items-center gap-2"
+              title="Global Ekosistem Gezgini (Ctrl+K)"
+            >
+              <span className="flex h-2 w-2 relative">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              <span className="hidden sm:inline uppercase tracking-wider text-[11px]">Ekosistem</span>
+              <kbd className="hidden lg:inline-block px-1.5 py-0.5 rounded bg-black/50 border border-white/10 text-[9px] text-zinc-400">
+                Ctrl+K
+              </kbd>
             </button>
             <a
               href="https://yalinizmedya.com"
@@ -193,6 +220,12 @@ export default function Header() {
           </div>
         </div>
       )}
+      {/* Global Ecosystem Switcher */}
+      <EcosystemSwitcher
+        isOpen={isEcosystemOpen}
+        onClose={() => setIsEcosystemOpen(false)}
+        currentNodeId="records"
+      />
     </>
   );
 }
