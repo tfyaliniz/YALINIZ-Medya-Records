@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  records:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: yaliniz-records
+    restart: always
+    ports:
+      - "3015:3015"
+    environment:
+      - NODE_ENV=production
+      - PORT=3015
+    networks:
+      - yaliniz-network
+
+networks:
+  yaliniz-network:
+    external: true

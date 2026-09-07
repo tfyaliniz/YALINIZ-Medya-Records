@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="ymGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCE5AC"/>
+      <stop offset="25%" stop-color="#E5BA6C"/>
+      <stop offset="70%" stop-color="#C59341"/>
+      <stop offset="100%" stop-color="#9C6B1B"/>
+    </linearGradient>
+    <linearGradient id="ymPrism" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5DC"/>
+      <stop offset="40%" stop-color="#F2CE85"/>
+      <stop offset="100%" stop-color="#DCA145"/>
+    </linearGradient>
+    <linearGradient id="ymLeftArm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF0D0"/>
+      <stop offset="50%" stop-color="#E7BD72"/>
+      <stop offset="100%" stop-color="#C99746"/>
+    </linearGradient>
+    <filter id="subtleDrop" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.8" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  
+  <g filter="url(#subtleDrop)">
+    <!-- Golden Architectural Y Monogram -->
+    <!-- Left Wing -->
+    <polygon points="12,16 34,16 50,45 40,49 12,16" fill="url(#ymLeftArm)"/>
+    <!-- Right Wing -->
+    <polygon points="66,16 88,16 60,49 50,45 66,16" fill="url(#ymGold)"/>
+    <!-- Center Vertical Stem -->
+    <polygon points="40,49 60,49 60,86 40,86" fill="url(#ymGold)"/>
+    <!-- The Signature YALINIZ Golden Prism in the cleft -->
+    <polygon points="50,17 62.5,39 37.5,39" fill="url(#ymPrism)"/>
+  </g>
+</svg>

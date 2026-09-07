@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldLinear" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2D6" />
+      <stop offset="45%" stop-color="#E5C158" />
+      <stop offset="80%" stop-color="#C5A059" />
+      <stop offset="100%" stop-color="#946F29" />
+    </linearGradient>
+    <linearGradient id="rimLinear" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FDF4DC" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#9A7B1C" />
+    </linearGradient>
+    <radialGradient id="obsidianBg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#18181f" />
+      <stop offset="65%" stop-color="#0e0e13" />
+      <stop offset="100%" stop-color="#070709" />
+    </radialGradient>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.75"/>
+    </filter>
+  </defs>
+
+  <!-- Luxury Obsidian Squircle with Radiant Gold Rim -->
+  <rect x="14" y="14" width="484" height="484" rx="120" fill="url(#obsidianBg)" stroke="url(#rimLinear)" stroke-width="16" />
+
+  <!-- YALINIZ Medya Architectural Y Monogram -->
+  <g filter="url(#goldGlow)">
+    <path
+      d="M 98 122 L 202 122 L 256 256 L 310 122 L 414 122 L 298 296 L 298 392 L 214 392 L 214 296 Z"
+      fill="url(#goldLinear)"
+    />
+  </g>
+</svg>
