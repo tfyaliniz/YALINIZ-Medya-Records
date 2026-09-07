@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import LiveTrackingStudioWidget from '@/components/widgets/LiveTrackingStudioWidget';
 import CatalogSyncWidget from '@/components/widgets/CatalogSyncWidget';
+import AudiophilePlayer from '@/components/AudiophilePlayer';
 import { VINYL_RELEASES } from '@/data/mockData';
 import { Disc, Mic2, Radio, ShieldCheck, Waves, Sliders, ArrowRight, Award, Compass, Sparkles } from 'lucide-react';
 
@@ -126,6 +127,9 @@ export default function RecordsPage() {
             ))}
           </div>
         </section>
+
+        {/* 180g Audiophile Vinyl & Master Tape Interactive Turntable */}
+        <AudiophilePlayer />
 
         {/* Executive Vision & Fiduciary Leadership Statement */}
         <section className="p-8 sm:p-12 rounded-3xl bg-zinc-950 border border-white/10 shadow-2xl">

@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { EcosystemSwitcher } from './EcosystemSwitcher';
+import { EcosystemAuthBridge } from './EcosystemAuthBridge';
 import Link from 'next/link';
 import { Disc, Mic2, Radio, Send, X, CheckCircle2, ShieldCheck, ArrowRight } from 'lucide-react';
 
@@ -92,6 +93,7 @@ export default function Header() {
                 Ctrl+K
               </kbd>
             </button>
+            <EcosystemAuthBridge />
             <a
               href="https://yalinizmedya.com"
               className="px-3 py-2 rounded-xl bg-zinc-900 border border-white/10 text-zinc-300 hover:text-white hover:border-white/20 text-xs transition hidden sm:inline-block"

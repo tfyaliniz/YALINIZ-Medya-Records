@@ -289,6 +289,27 @@ export const EcosystemSwitcher: React.FC<EcosystemSwitcherProps> = ({
     );
   });
 
+  const getNodeUrl = (node: EcosystemNode) => {
+    if (typeof window !== 'undefined') {
+      const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+      if (isLocal) {
+        return `http://localhost:${node.port}`;
+      }
+    }
+    return node.externalUrl || `https://${node.subdomain}`;
+  };
+
+  const getTelemetryUrl = () => {
+    if (typeof window !== 'undefined') {
+      const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+      if (isLocal) {
+        return 'http://localhost:3000/ecosystem';
+      }
+    }
+    return 'https://yalinizmedya.com/ecosystem';
+  };
+
+
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center pt-14 sm:pt-20 px-4 bg-black/85 backdrop-blur-xl animate-in fade-in duration-200">
       {/* Backdrop */}
@@ -384,7 +405,7 @@ export const EcosystemSwitcher: React.FC<EcosystemSwitcherProps> = ({
               return (
                 <a
                   key={node.id}
-                  href={node.externalUrl || `https://${node.subdomain}`}
+                  href={getNodeUrl(node)}
                   target={isCurrent ? '_self' : '_blank'}
                   rel="noopener noreferrer"
                   className={`p-4 rounded-xl border transition-all duration-200 flex flex-col justify-between group ${
@@ -468,7 +489,7 @@ export const EcosystemSwitcher: React.FC<EcosystemSwitcherProps> = ({
             <span>16 / 16 Egemen Servis Aktif • TLS 1.3 / mTLS Mesh</span>
           </div>
           <a
-            href="https://yalinizmedya.com/ecosystem"
+            href={getTelemetryUrl()}
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#c5a059] hover:underline flex items-center gap-1"
