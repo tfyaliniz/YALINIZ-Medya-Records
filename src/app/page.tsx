@@ -211,4 +211,4 @@ export default function RecordsPage() {
       </main>
     </div>
   );
-}\n
+}

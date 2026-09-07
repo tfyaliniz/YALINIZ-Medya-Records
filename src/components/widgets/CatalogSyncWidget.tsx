@@ -282,4 +282,4 @@ export default function CatalogSyncWidget() {
       </div>
     </div>
   );
-}\n
+}

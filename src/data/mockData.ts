@@ -188,4 +188,4 @@ export const SYNC_CATEGORIES = [
   { id: 'aaa_game', name: 'AAA Video Game Global OST & Trailer Campaign', baseQuoteMultiplier: 1.6 },
   { id: 'luxury_commercial', name: 'High-Fashion / Luxury Global Brand Campaign (1 Year)', baseQuoteMultiplier: 1.4 },
   { id: 'indie_documentary', name: 'Independent Film / Film Festival Debut Package', baseQuoteMultiplier: 0.8 }
-];\n
+];

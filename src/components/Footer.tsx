@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 p-1 flex items-center justify-center">
-                <img src="/images/logo/YALINIZ-Medya-Logo.png" alt="Logo" className="w-full h-full object-contain" onError={(e) => { e.currentTarget.src = '/logo.png'; }} />
+                <img src="/images/logo/YALINIZ-Medya-Logo.png" alt="Logo" className="w-full h-full object-contain" />
               </div>
               <span className="font-serif text-base font-bold text-white tracking-wider">YALINIZ RECORDS</span>
             </div>
@@ -72,4 +72,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-}\n
+}
