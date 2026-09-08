@@ -151,11 +151,14 @@ export const EcosystemAuthBridge: React.FC = () => {
         aria-label="Executive Portal"
       >
         {/* Crisp Face-Focused Portrait */}
-        <div className="relative w-7 h-7 rounded-full overflow-hidden ring-1 ring-[#c5a059]/60 shadow-[0_0_8px_rgba(197,160,89,0.3)] bg-black flex-shrink-0 flex items-center justify-center">
+        <div className="relative w-7 h-7 rounded-full overflow-hidden ring-1 ring-[#c5a059]/60 shadow-[0_0_8px_rgba(197,160,89,0.3)] bg-black flex-shrink-0 flex items-center justify-center" style={{ width: 28, height: 28, minWidth: 28, minHeight: 28 }}>
           {profile.avatar ? (
             <img
               src={profile.avatar}
               alt={profile.name}
+              width={28}
+              height={28}
+              style={{ width: '100%', height: '100%', maxWidth: '28px', maxHeight: '28px', objectFit: 'cover' }}
               className="w-full h-full object-cover object-[center_16%] scale-[1.7] transform"
               onError={(e) => {
                 e.currentTarget.style.display = 'none';
@@ -215,11 +218,14 @@ export const EcosystemAuthBridge: React.FC = () => {
 
             <div className="flex items-start gap-4 relative z-10">
               {/* High-Resolution Portrait with Gold Backlight */}
-              <div className="relative w-16 h-16 sm:w-18 sm:h-18 rounded-2xl overflow-hidden border-2 border-[#c5a059]/70 shadow-[0_0_20px_rgba(197,160,89,0.25)] bg-black flex-shrink-0">
+              <div className="relative w-16 h-16 sm:w-18 sm:h-18 rounded-2xl overflow-hidden border-2 border-[#c5a059]/70 shadow-[0_0_20px_rgba(197,160,89,0.25)] bg-black flex-shrink-0" style={{ width: 72, height: 72, minWidth: 72, minHeight: 72 }}>
                 {profile.avatar ? (
                   <img
                     src={profile.avatar}
                     alt={profile.name}
+                    width={72}
+                    height={72}
+                    style={{ width: '100%', height: '100%', maxWidth: '72px', maxHeight: '72px', objectFit: 'cover' }}
                     className="w-full h-full object-cover object-[center_16%] scale-[1.7] transform"
                   />
                 ) : (
