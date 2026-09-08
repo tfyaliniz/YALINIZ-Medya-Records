@@ -134,7 +134,7 @@ export const EcosystemAuthBridge: React.FC = () => {
   };
 
   const getUrl = (port: number, subdomain: string) => {
-    return "https://" + subdomain;
+    return "http://localhost:" + port;
   };
 
   return (
