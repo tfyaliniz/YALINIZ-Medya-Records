@@ -3,27 +3,88 @@
 @tailwind utilities;
 
 :root {
-  --background: #09090b;
-  --foreground: #fafafa;
+  --background: #08080a;
+  --foreground: #f9f8f5;
+  --gold: #c5a059;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #08080a;
+  color: #f9f8f5;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-feature-settings: "rlig" 1, "calt" 1;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #08080a;
+  color: #f9f8f5;
+  min-height: 100vh;
 }
 
-/* Custom golden scrollbar */
+::selection {
+  background-color: #c5a059;
+  color: #08080a;
+}
+
+/* 6px Architectural Luxury Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #09090b;
+  background: #08080a;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: #26262a;
   border-radius: 3px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #c5a059;
+}
+
+/* Subtle tactile film grain overlay */
+.film-grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.02;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.editorial-title {
+  font-family: var(--font-serif);
+  font-feature-settings: "liga" 1, "dlig" 1;
+}
+
+.mono-metric {
+  font-family: var(--font-mono);
+  letter-spacing: 0.06em;
+}
+
+.hover-card-effect {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-card-effect:hover {
+  transform: translateY(-3px);
+  border-color: rgba(197, 160, 89, 0.4);
+  box-shadow: 0 16px 36px -12px rgba(197, 160, 89, 0.15);
 }

@@ -246,14 +246,14 @@ export const AudiophilePlayer: React.FC = () => {
   };
 
   return (
-    <section id="turntable-player" className="p-6 sm:p-10 rounded-3xl bg-zinc-950 border border-amber-500/30 shadow-2xl space-y-8 relative overflow-hidden">
+    <section id="turntable-player" className="p-6 sm:p-10 rounded-3xl bg-zinc-950 border border-[#c5a059]/30 shadow-2xl space-y-8 relative overflow-hidden">
       {/* Background tape glow */}
-      <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-amber-500/5 blur-3xl pointer-events-none" />
+      <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-[#c5a059]/5 blur-3xl pointer-events-none" />
 
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-6">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-2">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#c5a059]/10 text-[#c5a059] text-xs font-semibold uppercase tracking-widest mb-2">
             <Radio className="w-3.5 h-3.5 animate-pulse" /> Studer A800 Virtual Turntable
           </div>
           <h2 className="font-serif text-2xl sm:text-3xl font-bold text-white tracking-tight">
@@ -270,7 +270,7 @@ export const AudiophilePlayer: React.FC = () => {
             onClick={() => setTapeSpeed('15 IPS')}
             className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-all ${
               tapeSpeed === '15 IPS'
-                ? 'bg-amber-500 text-black font-bold shadow'
+                ? 'bg-[#c5a059] text-black font-bold shadow'
                 : 'text-zinc-400 hover:text-white'
             }`}
           >
@@ -280,7 +280,7 @@ export const AudiophilePlayer: React.FC = () => {
             onClick={() => setTapeSpeed('30 IPS')}
             className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-all ${
               tapeSpeed === '30 IPS'
-                ? 'bg-amber-500 text-black font-bold shadow'
+                ? 'bg-[#c5a059] text-black font-bold shadow'
                 : 'text-zinc-400 hover:text-white'
             }`}
           >
@@ -320,11 +320,11 @@ export const AudiophilePlayer: React.FC = () => {
 
             {/* Tonearm Simulation */}
             <div
-              className={`absolute top-4 right-4 w-12 h-32 border-r-2 border-t-2 border-amber-400/80 rounded-tr-2xl origin-top-right transition-transform duration-700 pointer-events-none ${
+              className={`absolute top-4 right-4 w-12 h-32 border-r-2 border-t-2 border-[#c5a059]/80 rounded-tr-2xl origin-top-right transition-transform duration-700 pointer-events-none ${
                 isPlaying ? 'rotate-12' : '-rotate-12'
               }`}
             >
-              <div className="absolute -bottom-1 -left-1 w-3 h-3 rounded-full bg-amber-400 shadow-glow" />
+              <div className="absolute -bottom-1 -left-1 w-3 h-3 rounded-full bg-[#c5a059] shadow-glow" />
             </div>
           </div>
         </div>
@@ -334,7 +334,7 @@ export const AudiophilePlayer: React.FC = () => {
           {/* Active Track Metadata */}
           <div className="p-5 rounded-2xl bg-black/50 border border-white/10 space-y-3">
             <div className="flex items-center justify-between text-xs font-mono">
-              <span className="text-amber-400 uppercase tracking-widest flex items-center gap-1.5">
+              <span className="text-[#c5a059] uppercase tracking-widest flex items-center gap-1.5">
                 <Sparkles className="w-3.5 h-3.5" /> Şimdi Çalıyor
               </span>
               <span className="text-zinc-500">{track.format}</span>
@@ -386,7 +386,7 @@ export const AudiophilePlayer: React.FC = () => {
             <div className="flex items-center gap-3">
               <button
                 onClick={handlePrev}
-                className="p-3 rounded-xl bg-zinc-900 border border-white/10 text-zinc-300 hover:text-white hover:border-amber-400/40 transition"
+                className="p-3 rounded-xl bg-zinc-900 border border-white/10 text-zinc-300 hover:text-white hover:border-[#c5a059]/40 transition"
                 title="Önceki Kayıt"
               >
                 <SkipBack className="w-4 h-4" />
@@ -394,7 +394,7 @@ export const AudiophilePlayer: React.FC = () => {
 
               <button
                 onClick={togglePlay}
-                className="px-6 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-black font-bold text-sm tracking-wider uppercase hover:brightness-110 transition shadow-lg shadow-amber-500/20 flex items-center gap-2"
+                className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#c5a059] via-[#d4af37] to-[#b88c3a] text-black font-bold text-sm tracking-wider uppercase hover:brightness-110 transition shadow-lg shadow-[#c5a059]/20 flex items-center gap-2"
               >
                 {isPlaying ? (
                   <>
@@ -411,7 +411,7 @@ export const AudiophilePlayer: React.FC = () => {
 
               <button
                 onClick={handleNext}
-                className="p-3 rounded-xl bg-zinc-900 border border-white/10 text-zinc-300 hover:text-white hover:border-amber-400/40 transition"
+                className="p-3 rounded-xl bg-zinc-900 border border-white/10 text-zinc-300 hover:text-white hover:border-[#c5a059]/40 transition"
                 title="Sonraki Kayıt"
               >
                 <SkipForward className="w-4 h-4" />
@@ -424,7 +424,7 @@ export const AudiophilePlayer: React.FC = () => {
                 {isMuted || volume === 0 ? (
                   <VolumeX className="w-4 h-4 text-red-400" />
                 ) : (
-                  <Volume2 className="w-4 h-4 text-amber-400" />
+                  <Volume2 className="w-4 h-4 text-[#c5a059]" />
                 )}
               </button>
               <input
@@ -459,7 +459,7 @@ export const AudiophilePlayer: React.FC = () => {
                 }}
                 className={`p-3 rounded-xl border text-left transition-all flex items-center justify-between ${
                   isSelected
-                    ? 'bg-[#181822] border-amber-500/60 shadow'
+                    ? 'bg-[#181822] border-[#c5a059]/60 shadow'
                     : 'bg-black/40 border-white/5 hover:bg-zinc-900 hover:border-white/20'
                 }`}
               >
@@ -471,7 +471,7 @@ export const AudiophilePlayer: React.FC = () => {
                     {t.artist.split('&')[0]}
                   </div>
                 </div>
-                <span className="text-[10px] font-mono text-amber-400">
+                <span className="text-[10px] font-mono text-[#c5a059]">
                   {t.duration}
                 </span>
               </button>

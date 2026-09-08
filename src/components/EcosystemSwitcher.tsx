@@ -320,7 +320,7 @@ export const EcosystemSwitcher: React.FC<EcosystemSwitcherProps> = ({
         {/* Header */}
         <div className="p-5 sm:p-6 border-b border-white/10 flex items-center justify-between gap-4 bg-[#111116]">
           <div className="flex items-center gap-3.5">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500/20 via-amber-400/10 to-transparent border border-amber-500/30 flex items-center justify-center text-[#c5a059]">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#c5a059]/20 via-[#d4af37]/10 to-transparent border border-[#c5a059]/30 flex items-center justify-center text-[#c5a059]">
               <Compass className="w-5 h-5 animate-spin-slow" />
             </div>
             <div>

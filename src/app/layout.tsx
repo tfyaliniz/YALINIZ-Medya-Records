@@ -27,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark scroll-smooth">
-      <body className="min-h-screen bg-black text-zinc-100 flex flex-col antialiased selection:bg-amber-400 selection:text-black">
+      <body className="min-h-screen bg-black text-zinc-100 flex flex-col antialiased selection:bg-[#c5a059] selection:text-[#08080a]">
         <Header />
         <main className="flex-grow">
           {children}

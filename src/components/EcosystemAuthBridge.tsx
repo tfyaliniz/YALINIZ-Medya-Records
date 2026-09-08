@@ -285,7 +285,7 @@ export const EcosystemAuthBridge: React.FC = () => {
                 className="p-3 rounded-xl bg-black/40 hover:bg-[#14141e] border border-white/[0.07] hover:border-[#c5a059]/50 transition-all flex items-center justify-between group"
               >
                 <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-[#c5a059] group-hover:scale-105 transition-transform flex-shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-[#c5a059]/10 border border-[#c5a059]/20 flex items-center justify-center text-[#c5a059] group-hover:scale-105 transition-transform flex-shrink-0">
                     <Building2 className="w-4 h-4" />
                   </div>
                   <div>
@@ -308,7 +308,7 @@ export const EcosystemAuthBridge: React.FC = () => {
                 className="p-3 rounded-xl bg-black/40 hover:bg-[#14141e] border border-white/[0.07] hover:border-[#c5a059]/50 transition-all flex items-center justify-between group"
               >
                 <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-[#c5a059] group-hover:scale-105 transition-transform flex-shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-[#c5a059]/10 border border-[#c5a059]/20 flex items-center justify-center text-[#c5a059] group-hover:scale-105 transition-transform flex-shrink-0">
                     <Disc className="w-4 h-4" />
                   </div>
                   <div>
@@ -331,7 +331,7 @@ export const EcosystemAuthBridge: React.FC = () => {
                 className="p-3 rounded-xl bg-black/40 hover:bg-[#14141e] border border-white/[0.07] hover:border-[#c5a059]/50 transition-all flex items-center justify-between group"
               >
                 <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-[#c5a059] group-hover:scale-105 transition-transform flex-shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-[#c5a059]/10 border border-[#c5a059]/20 flex items-center justify-center text-[#c5a059] group-hover:scale-105 transition-transform flex-shrink-0">
                     <Video className="w-4 h-4" />
                   </div>
                   <div>
@@ -354,7 +354,7 @@ export const EcosystemAuthBridge: React.FC = () => {
                 className="p-3 rounded-xl bg-black/40 hover:bg-[#14141e] border border-white/[0.07] hover:border-[#c5a059]/50 transition-all flex items-center justify-between group"
               >
                 <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-[#c5a059] group-hover:scale-105 transition-transform flex-shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-[#c5a059]/10 border border-[#c5a059]/20 flex items-center justify-center text-[#c5a059] group-hover:scale-105 transition-transform flex-shrink-0">
                     <Users2 className="w-4 h-4" />
                   </div>
                   <div>

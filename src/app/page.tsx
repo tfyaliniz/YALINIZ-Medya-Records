@@ -8,17 +8,17 @@ import { Disc, Mic2, Radio, ShieldCheck, Waves, Sliders, ArrowRight, Award, Comp
 
 export default function RecordsPage() {
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-amber-400 selection:text-black">
+    <div className="min-h-screen bg-[#08080a] text-white selection:bg-[#c5a059] selection:text-[#08080a] selection:bg-[#c5a059] selection:text-[#08080a]">
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
         {/* Hero Section */}
         <section className="relative pt-8 pb-10 text-center max-w-4xl mx-auto space-y-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-400 text-xs font-semibold uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#c5a059]/10 border border-[#c5a059]/20 text-[#c5a059] text-xs font-semibold uppercase tracking-widest">
             <Disc className="w-3.5 h-3.5" />
             YALINIZ Records • Studio Music Recording & Vinyl Imprint
           </div>
 
           <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
-            Studio Music Recording & <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-600">Heavyweight Vinyl</span>
+            Studio Music Recording & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f3e7c4] via-[#d4af37] to-[#b88c3a]">Heavyweight Vinyl</span>
           </h1>
 
           <p className="text-zinc-400 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
@@ -28,7 +28,7 @@ export default function RecordsPage() {
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
             <a
               href="#tracking-studio"
-              className="px-6 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-black font-semibold text-xs tracking-wider uppercase hover:brightness-110 transition shadow-lg shadow-amber-500/20 flex items-center gap-2"
+              className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#c5a059] via-[#d4af37] to-[#b88c3a] text-black font-semibold text-xs tracking-wider uppercase hover:brightness-110 transition shadow-lg shadow-[#c5a059]/20 flex items-center gap-2"
             >
               <Mic2 className="w-4 h-4" /> Live Tracking Console
             </a>
@@ -36,13 +36,13 @@ export default function RecordsPage() {
               href="#turntable-player"
               className="px-6 py-3 rounded-xl bg-zinc-900 border border-white/10 hover:border-white/20 text-white font-medium text-xs tracking-wider uppercase transition flex items-center gap-2"
             >
-              <Radio className="w-4 h-4 text-amber-400" /> Virtual Turntable
+              <Radio className="w-4 h-4 text-[#c5a059]" /> Virtual Turntable
             </a>
             <a
               href="#vinyl-releases"
               className="px-6 py-3 rounded-xl bg-zinc-900 border border-white/10 hover:border-white/20 text-white font-medium text-xs tracking-wider uppercase transition flex items-center gap-2"
             >
-              <Disc className="w-4 h-4 text-amber-400" /> 180g Vinyl Releases
+              <Disc className="w-4 h-4 text-[#c5a059]" /> 180g Vinyl Releases
             </a>
           </div>
         </section>
@@ -61,7 +61,7 @@ export default function RecordsPage() {
         <section id="vinyl-releases" className="space-y-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-white/10 pb-4">
             <div>
-              <div className="text-xs font-semibold text-amber-400 uppercase tracking-widest flex items-center gap-1.5 mb-1">
+              <div className="text-xs font-semibold text-[#c5a059] uppercase tracking-widest flex items-center gap-1.5 mb-1">
                 <Disc className="w-4 h-4" /> Numbered Physical Editions
               </div>
               <h2 className="font-serif text-2xl sm:text-3xl font-bold text-white">
@@ -77,7 +77,7 @@ export default function RecordsPage() {
             {VINYL_RELEASES.map((release) => (
               <div
                 key={release.id}
-                className="group rounded-2xl bg-zinc-950 border border-white/10 hover:border-amber-400/40 transition-all overflow-hidden flex flex-col justify-between shadow-xl"
+                className="group rounded-2xl bg-zinc-950 border border-white/10 hover:border-[#c5a059]/40 transition-all overflow-hidden flex flex-col justify-between shadow-xl"
               >
                 <div>
                   {/* Album Artwork with Hover Zoom & Matrix Badges */}
@@ -87,7 +87,7 @@ export default function RecordsPage() {
                       alt={release.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
-                    <div className="absolute top-3 left-3 bg-black/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10 text-[10px] font-mono text-amber-400">
+                    <div className="absolute top-3 left-3 bg-black/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10 text-[10px] font-mono text-[#c5a059]">
                       {release.catalogNumber}
                     </div>
                     <div className="absolute bottom-3 right-3 bg-black/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10 text-[10px] font-mono text-white">
@@ -96,8 +96,8 @@ export default function RecordsPage() {
                   </div>
 
                   <div className="p-6 space-y-3">
-                    <div className="text-xs text-amber-400 font-medium">{release.genre}</div>
-                    <h3 className="font-serif text-xl font-bold text-white group-hover:text-amber-300 transition">
+                    <div className="text-xs text-[#c5a059] font-medium">{release.genre}</div>
+                    <h3 className="font-serif text-xl font-bold text-white group-hover:text-[#e5c07b] transition">
                       {release.title}
                     </h3>
                     <p className="text-sm text-zinc-300">{release.artist}</p>
@@ -109,7 +109,7 @@ export default function RecordsPage() {
                       </div>
                       <div className="flex justify-between">
                         <span className="text-zinc-500">Vault Inventory:</span>
-                        <span className="text-amber-400 font-mono font-semibold">{release.availableStock} / {release.pressingUnits}</span>
+                        <span className="text-[#c5a059] font-mono font-semibold">{release.availableStock} / {release.pressingUnits}</span>
                       </div>
                     </div>
                   </div>
@@ -118,7 +118,7 @@ export default function RecordsPage() {
                 <div className="p-6 pt-0">
                   <a
                     href="#turntable-player"
-                    className="w-full py-2.5 rounded-xl bg-zinc-900 border border-white/10 hover:border-amber-400/40 text-xs font-semibold text-zinc-300 hover:text-white transition text-center flex items-center justify-center gap-1.5"
+                    className="w-full py-2.5 rounded-xl bg-zinc-900 border border-white/10 hover:border-[#c5a059]/40 text-xs font-semibold text-zinc-300 hover:text-white transition text-center flex items-center justify-center gap-1.5"
                   >
                     Spin on Turntable <ArrowRight className="w-3.5 h-3.5" />
                   </a>
@@ -136,7 +136,7 @@ export default function RecordsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             {/* Founder Portrait */}
             <div className="lg:col-span-4 flex justify-center">
-              <div className="relative w-64 h-80 sm:w-72 sm:h-96 rounded-2xl overflow-hidden border-2 border-amber-500/30 shadow-2xl bg-zinc-900">
+              <div className="relative w-64 h-80 sm:w-72 sm:h-96 rounded-2xl overflow-hidden border-2 border-[#c5a059]/30 shadow-2xl bg-zinc-900">
                 <img
                   src="/photos/Kurucu.jpeg"
                   alt="Taha Furkan YALINIZ"
@@ -144,7 +144,7 @@ export default function RecordsPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 text-left">
-                  <span className="text-[10px] font-mono text-amber-400 uppercase tracking-widest block">Executive Producer & Founder</span>
+                  <span className="text-[10px] font-mono text-[#c5a059] uppercase tracking-widest block">Executive Producer & Founder</span>
                   <span className="font-serif text-lg font-bold text-white block">Taha Furkan YALINIZ</span>
                   <span className="text-[11px] text-zinc-400">YALINIZ Medya Group</span>
                 </div>
@@ -153,7 +153,7 @@ export default function RecordsPage() {
 
             {/* Vision Copy */}
             <div className="lg:col-span-8 space-y-6 text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 text-amber-400 text-xs font-semibold uppercase tracking-widest">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#c5a059]/10 text-[#c5a059] text-xs font-semibold uppercase tracking-widest">
                 <Award className="w-3.5 h-3.5" /> Institutional Music Manifesto
               </div>
               <h3 className="font-serif text-2xl sm:text-4xl font-bold text-white leading-snug">
@@ -176,7 +176,7 @@ export default function RecordsPage() {
                 </div>
                 <div>
                   <span className="text-zinc-500 uppercase block">CLEARANCE SPEED</span>
-                  <span className="text-amber-400 font-bold">&lt; 24 Hours Guaranteed</span>
+                  <span className="text-[#c5a059] font-bold">&lt; 24 Hours Guaranteed</span>
                 </div>
               </div>
             </div>
@@ -186,7 +186,7 @@ export default function RecordsPage() {
         {/* Sync Licensing One-Stop Charter */}
         <section id="sync-licensing" className="p-8 sm:p-12 rounded-3xl bg-zinc-950 border border-white/10 shadow-2xl space-y-8">
           <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 text-amber-400 text-xs font-semibold uppercase tracking-widest">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#c5a059]/10 text-[#c5a059] text-xs font-semibold uppercase tracking-widest">
               <ShieldCheck className="w-3.5 h-3.5" /> Direct Clearance Covenant
             </div>
             <h2 className="font-serif text-3xl font-bold text-white leading-tight">
@@ -199,15 +199,15 @@ export default function RecordsPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 border-t border-white/5 text-xs">
             <div className="p-4 rounded-xl bg-black/50 border border-white/5 space-y-2">
-              <div className="text-amber-400 font-serif font-bold text-base">Zero Clearance Friction</div>
+              <div className="text-[#c5a059] font-serif font-bold text-base">Zero Clearance Friction</div>
               <p className="text-zinc-400 leading-relaxed">Both sound recording (Master) and underlying composition (Publishing) are controlled in-house.</p>
             </div>
             <div className="p-4 rounded-xl bg-black/50 border border-white/5 space-y-2">
-              <div className="text-amber-400 font-serif font-bold text-base">Dolby Atmos Spatial Stems</div>
+              <div className="text-[#c5a059] font-serif font-bold text-base">Dolby Atmos Spatial Stems</div>
               <p className="text-zinc-400 leading-relaxed">Delivered in discrete 24-bit 96kHz multi-channel stems ready for theatrical re-recording mixing.</p>
             </div>
             <div className="p-4 rounded-xl bg-black/50 border border-white/5 space-y-2">
-              <div className="text-amber-400 font-serif font-bold text-base">Worldwide Legal Indemnity</div>
+              <div className="text-[#c5a059] font-serif font-bold text-base">Worldwide Legal Indemnity</div>
               <p className="text-zinc-400 leading-relaxed">Comprehensive copyright warranty protecting your feature film in all territories and festivals.</p>
             </div>
           </div>
