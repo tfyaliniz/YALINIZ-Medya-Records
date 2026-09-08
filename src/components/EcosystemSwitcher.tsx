@@ -300,12 +300,6 @@ export const EcosystemSwitcher: React.FC<EcosystemSwitcherProps> = ({
   };
 
   const getTelemetryUrl = () => {
-    if (typeof window !== 'undefined') {
-      const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-      if (isLocal) {
-        return 'http://localhost:3000/ecosystem';
-      }
-    }
     return 'https://yalinizmedya.com/ecosystem';
   };
 

@@ -134,11 +134,7 @@ export const EcosystemAuthBridge: React.FC = () => {
   };
 
   const getUrl = (port: number, subdomain: string) => {
-    if (typeof window !== 'undefined') {
-      const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-      if (isLocal) return `http://localhost:${port}`;
-    }
-    return `https://${subdomain}`;
+    return "https://" + subdomain;
   };
 
   return (
